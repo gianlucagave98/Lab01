@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Determinar par/impar/nulo Javascript</title>
+	<script type="text/javascript">
+		var comision = function(){
+			var numero = parseFloat(document.getElementById('EN').value);
+			if ( numero==0) {
+				document.getElementById('resultado').value = "El numero "+numero+" es nulo";
+			} else if (numero%2==0 ) {
+				document.getElementById('resultado').value = "El numero "+numero+" es par";
+			} else {
+				document.getElementById('resultado').value = "El numero "+numero+" es impar";
+			}
+			
+		};
+	</script>
+</head>
+<body>
+	<form>
+		<p>Ingrese numero entero: <input type="text" id="EN" size="20"></p>
+		<p><input type="button" value="Determinar" onClick="comision()"></p>
+		<p>Comision: <input type="text" id="resultado" disabled="disabled"></p>
+	</form>
+
+</body>
+</html>

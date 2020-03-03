@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Comision Javascript</title>
+	<script type="text/javascript">
+		var comision = function(){
+			var ventas = parseFloat(document.getElementById('VT').value);
+			if ( ventas <= 150) {
+				document.getElementById('resultado').value = "No se obtuvo comision";
+			} else if (ventas > 150 && ventas <= 400 ) {
+				document.getElementById('resultado').value = ventas * 0.1;
+			} else {
+				document.getElementById('resultado').value = ventas * 0.09 + 50;
+			}
+			
+		};
+	</script>
+</head>
+<body>
+	<form>
+		<p>Ingrese ventas: <input type="text" id="VT" size="20"></p>
+		<p><input type="button" value="Obtener Comision" onClick="comision()"></p>
+		<p>Comision: <input type="text" id="resultado" disabled="disabled"></p>
+	</form>
+
+</body>
+</html>
